@@ -1,0 +1,14 @@
+/Users/user/RiderProjects/PSI-G9/Detyra1/bin/Debug/net9.0/Detyra1
+/Users/user/RiderProjects/PSI-G9/Detyra1/bin/Debug/net9.0/Detyra1.deps.json
+/Users/user/RiderProjects/PSI-G9/Detyra1/bin/Debug/net9.0/Detyra1.runtimeconfig.json
+/Users/user/RiderProjects/PSI-G9/Detyra1/bin/Debug/net9.0/Detyra1.dll
+/Users/user/RiderProjects/PSI-G9/Detyra1/bin/Debug/net9.0/Detyra1.pdb
+/Users/user/RiderProjects/PSI-G9/Detyra1/obj/Debug/net9.0/Detyra1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/RiderProjects/PSI-G9/Detyra1/obj/Debug/net9.0/Detyra1.AssemblyInfoInputs.cache
+/Users/user/RiderProjects/PSI-G9/Detyra1/obj/Debug/net9.0/Detyra1.AssemblyInfo.cs
+/Users/user/RiderProjects/PSI-G9/Detyra1/obj/Debug/net9.0/Detyra1.csproj.CoreCompileInputs.cache
+/Users/user/RiderProjects/PSI-G9/Detyra1/obj/Debug/net9.0/Detyra1.dll
+/Users/user/RiderProjects/PSI-G9/Detyra1/obj/Debug/net9.0/refint/Detyra1.dll
+/Users/user/RiderProjects/PSI-G9/Detyra1/obj/Debug/net9.0/Detyra1.pdb
+/Users/user/RiderProjects/PSI-G9/Detyra1/obj/Debug/net9.0/Detyra1.genruntimeconfig.cache
+/Users/user/RiderProjects/PSI-G9/Detyra1/obj/Debug/net9.0/ref/Detyra1.dll
