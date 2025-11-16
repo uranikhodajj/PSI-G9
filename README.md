@@ -32,9 +32,9 @@ Modifikuari: 05c6e08f1d9fdafa03147fcb8f82f124c76d2f70e3d989dc8aadb5e7d7450bec  <
 Numri i bitëve të ndryshëm: 142  <br>
 
 === Benchmarking SHA-256 ===  <br>
-1 hash: 0 ms  <br>
-1000 hash-e: 23 ms  <br>
-Shpejtësia: 43478.26 hash/sec  <br>
+1 hash: 0.061 ms  <br>
+1000 hash-e: 24.261 ms  <br>
+Shpejtësia: 41218.08 hash/sec  <br>
 
 === Testimi i kolizioneve ===  <br>
 Asnjë kolizion nuk u gjet.
