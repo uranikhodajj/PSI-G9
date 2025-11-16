@@ -83,6 +83,10 @@ namespace Detyra1
             Console.WriteLine("");
             TestAvalancheEffect();
             Console.WriteLine("");
+            Benchmarking();
+            Console.WriteLine("");
+            TestCollisions();
+            Console.WriteLine("");
 
             Console.WriteLine("=== Self-tests të përdoruesit për SHA-256 ===");
             var vectors = new Dictionary<string, string>
@@ -267,6 +271,60 @@ namespace Detyra1
             }
             return count;
         }
+        private static void Benchmarking()
+        {
+            Console.WriteLine("=== Benchmarking SHA-256 ===");
+
+            var sw = new System.Diagnostics.Stopwatch();
+
+            sw.Start();
+            Sha256Hex(Encoding.UTF8.GetBytes("benchmark test"));
+            sw.Stop();
+            Console.WriteLine($"1 hash: {sw.ElapsedMilliseconds} ms");
+
+            sw.Restart();
+            for (int i = 0; i < 1000; i++)
+                Sha256Hex(Encoding.UTF8.GetBytes("input " + i));
+            sw.Stop();
+            Console.WriteLine($"1000 hash-e: {sw.ElapsedMilliseconds} ms");
+
+            double hashesPerSec = 1000.0 / (sw.ElapsedMilliseconds / 1000.0);
+            Console.WriteLine($"Shpejtësia: {hashesPerSec:F2} hash/sec");
+        }
+        private static void TestCollisions()
+        {
+            Console.WriteLine("=== Testimi i kolizioneve ===");
+
+            var inputs = new[]
+            {
+        "", "a", "A", "abc", "Abc", "123", "!@#",
+        "The quick brown fox",
+        "The quick brown fox.",
+        "Hash me, Shqipëri: ëË"
+    };
+
+            var hashes = new Dictionary<string, string>();
+            bool collisionFound = false;
+
+            foreach (var input in inputs)
+            {
+                string h = Sha256Hex(Encoding.UTF8.GetBytes(input));
+
+                if (hashes.ContainsKey(h))
+                {
+                    collisionFound = true;
+                    Console.WriteLine($"KOLIZION! \"{input}\" dhe \"{hashes[h]}\" → {h}");
+                }
+                else
+                {
+                    hashes[h] = input;
+                }
+            }
+
+            if (!collisionFound)
+                Console.WriteLine("Asnjë kolizion nuk u gjet.");
+        }
+
 
     }
 }
